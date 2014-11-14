@@ -1,0 +1,11 @@
+{
+  "name": "mydashboard",
+  "version": "0.0.0",
+  "authors": [
+    "ramanathanMuthuraman <ramanathan.gksvv@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
