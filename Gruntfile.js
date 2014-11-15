@@ -28,6 +28,26 @@ module.exports = function(grunt) {
         }
     },
 
+
+    connect: {
+      server: {
+        options: {
+          open:{
+              target: 'http://localhost:3000/app'
+          },
+          livereload: true,
+          port: 3000
+        }
+      }
+},
+
+watch: {
+  scss: {
+    files: ['**/*.scss'],
+    tasks: ['sass']
+  }
+},
+
     useminPrepare: {
     html: 'app/index.html',
     options: {
@@ -65,6 +85,10 @@ usemin: {
   grunt.loadNpmTasks('grunt-contrib-concat'); 
      // Load the plugin that provides the "usemin" task.
   grunt.loadNpmTasks('grunt-usemin');
+    // Load the plugin that provides the "connect" task.
+  grunt.loadNpmTasks('grunt-contrib-connect');
+    // Load the plugin that provides the "watch" task.
+  grunt.loadNpmTasks('grunt-contrib-watch');
         // Build task(s).
       grunt.registerTask('build', [
     'clean',
@@ -75,6 +99,13 @@ usemin: {
      'cssmin',
      'uglify',
     'usemin'
+  ]);
+
+      grunt.registerTask('serve', [
+    'clean',
+     'sass',
+     'connect:server',
+     'watch'
   ]);
 
       
