@@ -1,0 +1,197 @@
+{
+    "dashboard": [
+        {
+            "type": "Build",
+            "id": "Tenrox-R1_1235",
+            "owner": "",
+            "time_started": "",
+            "state": "Pending",
+            "message": "",
+            "data": []
+        },
+        {
+            "type": "Firewall",
+            "id": "432462",
+            "owner": "jtuck",
+            "time_started": "4/18/2014 12:12pm",
+            "state": "Running",
+            "message": "",
+            "data": []
+        },
+        {
+            "type": "Firewall",
+            "id": "432461",
+            "owner": "samy",
+            "time_started": "4/18/2014 10:53am",
+            "state": "Rejected",
+            "message": "Metrics Reduction",
+            "data": [
+                {
+                    "metrics": {
+                        "Test": "64",
+                        "Maintainability": "-53",
+                        "Security": "64",
+                        "Workmanship": "72"
+                    }
+                },
+                {
+                    "build": "10:46am - 4/17/2014"
+                },
+                {
+                    "unit_Test": {
+                        "code_coverage": "76%",
+                        "tests_passed": "142",
+                        "tests_failed": "10"
+                    }
+                },
+                {
+                    "functional_Test": {
+                        "code_coverage": "23%",
+                        "tests_passed": "4321",
+                        "tests_failed": "2145"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Build",
+            "id": "Tenrox-R1_1234",
+            "owner": "",
+            "time_started": "4/18/2014 12:12pm",
+            "state": "Complete",
+            "message": "Complete",
+            "data": [
+                {
+                    "metrics": {
+                        "Test": "64",
+                        "Maintainability": "-53",
+                        "Security": "64",
+                        "Workmanship": "72"
+                    }
+                },
+                {
+                    "build": "10:46am - 4/17/2014"
+                },
+                {
+                    "unit_Test": {
+                        "code_coverage": "76%",
+                        "tests_passed": "142",
+                        "tests_failed": "10"
+                    }
+                },
+                {
+                    "functional_Test": {
+                        "code_coverage": "23%",
+                        "tests_passed": "4321",
+                        "tests_failed": "2145"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Firewall",
+            "id": "432460",
+            "owner": "samy",
+            "time_started": "4/17/2014 7:51am",
+            "state": "Rejected",
+            "message": "Metrics Reduction",
+            "data": [
+                {
+                    "metrics": {
+                        "Test": "64",
+                        "Maintainability": "-53",
+                        "Security": "64",
+                        "Workmanship": "72"
+                    }
+                },
+                {
+                    "build": "10:46am - 4/17/2014"
+                },
+                {
+                    "unit_Test": {
+                        "code_coverage": "76%",
+                        "tests_passed": "142",
+                        "tests_failed": "10"
+                    }
+                },
+                {
+                    "functional_Test": {
+                        "code_coverage": "23%",
+                        "tests_passed": "4321",
+                        "tests_failed": "2145"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Firewall",
+            "id": "432459",
+            "owner": "samy",
+            "time_started": "4/16/2014 6:43am",
+            "state": "Accepted",
+            "message": "Auto-Merged",
+            "data": [
+                {
+                    "metrics": {
+                        "Test": "64",
+                        "Maintainability": "-53",
+                        "Security": "64",
+                        "Workmanship": "72"
+                    }
+                },
+                {
+                    "build": "10:46am - 4/17/2014"
+                },
+                {
+                    "unit_Test": {
+                        "code_coverage": "76%",
+                        "tests_passed": "142",
+                        "tests_failed": "10"
+                    }
+                },
+                {
+                    "functional_Test": {
+                        "code_coverage": "23%",
+                        "tests_passed": "4321",
+                        "tests_failed": "2145"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Build",
+            "id": "Tenrox-R2_1234",
+            "owner": "",
+            "time_started": "4/18/2014 12:12pm",
+            "state": "Failed",
+            "message": "Failed",
+            "data": [
+                {
+                    "metrics": {
+                        "Test": "64",
+                        "Maintainability": "-53",
+                        "Security": "64",
+                        "Workmanship": "72"
+                    }
+                },
+                {
+                    "build": "10:46am - 4/17/2014"
+                },
+                {
+                    "unit_Test": {
+                        "code_coverage": "76%",
+                        "tests_passed": "142",
+                        "tests_failed": "10"
+                    }
+                },
+                {
+                    "functional_Test": {
+                        "code_coverage": "23%",
+                        "tests_passed": "4321",
+                        "tests_failed": "2145"
+                    }
+                }
+            ]
+        }
+    ]
+}

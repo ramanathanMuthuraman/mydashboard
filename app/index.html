@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="mydashboard">
   <head>
     <meta charset="utf-8">
     <title>Dashboard</title>
@@ -9,11 +9,15 @@
      <link type="text/css" rel="stylesheet" href="../.tmp/styles/main.css">
 <!-- endbuild -->
   </head>
-  <body>
+  <body ng-controller="MainCtrl">
   <h2>Dashboard</h2>
 <!-- build:js js/main.js -->
      <script src="../bower_components/jquery/dist/jquery.js"></script>
+     <script src="../bower_components/angular/angular.js"></script>
       <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+       <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+         <script src="scripts/factory/service.js"></script>
 <!-- endbuild -->
   </body>
 </html>

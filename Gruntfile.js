@@ -30,10 +30,18 @@ module.exports = function(grunt) {
 
 
     connect: {
-      server: {
+      devserver: {
         options: {
           open:{
               target: 'http://localhost:3000/app'
+          },
+          port: 3000
+        }
+      },
+      prodserver: {
+        options: {
+          open:{
+              target: 'http://localhost:3000/dist'
           },
           port: 3000
         }
@@ -63,12 +71,18 @@ usemin: {
 },
 
  copy: {
-  task: {
+  html: {
     expand: true,
     src: 'app/index.html',
     dest: 'dist/',
     flatten: true,
     filter: 'isFile',
+  },
+  assets: {
+    expand: true,
+    cwd: 'app/',
+    src: ['data/**'],
+    dest: 'dist/',
   }
 },
   
@@ -94,19 +108,22 @@ usemin: {
         // Build task(s).
       grunt.registerTask('build', [
     'clean',
-     'copy:task',
+     'copy:html',
+     'copy:assets',
      'sass',
      'useminPrepare',
      'concat',
      'cssmin',
      'uglify',
-    'usemin'
+    'usemin',
+    'connect:prodserver',
+    'watch'
   ]);
 
       grunt.registerTask('serve', [
     'clean',
      'sass',
-     'connect:server',
+     'connect:devserver',
      'watch'
   ]);
 
