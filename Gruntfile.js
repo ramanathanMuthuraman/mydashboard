@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     },
 
     useminPrepare: {
-    html: 'index.html',
+    html: 'app/index.html',
     options: {
         dest: 'dist'
     }
@@ -43,7 +43,7 @@ usemin: {
  copy: {
   task: {
     expand: true,
-    src: 'index.html',
+    src: 'app/index.html',
     dest: 'dist/',
     flatten: true,
     filter: 'isFile',
@@ -74,9 +74,10 @@ usemin: {
      'concat',
      'cssmin',
      'uglify',
-
     'usemin'
   ]);
+
+      
       // Default task(s).
    grunt.registerTask('default', [
     'build'
