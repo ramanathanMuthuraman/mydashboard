@@ -35,14 +35,16 @@ module.exports = function(grunt) {
           open:{
               target: 'http://localhost:3000/app'
           },
-          livereload: true,
           port: 3000
         }
       }
 },
 
 watch: {
-  scss: {
+   options: {
+    livereload: true,
+  },
+  sass: {
     files: ['**/*.scss'],
     tasks: ['sass']
   }
@@ -111,7 +113,7 @@ usemin: {
       
       // Default task(s).
    grunt.registerTask('default', [
-    'build'
+    'serve'
   ]); 
 
 };
