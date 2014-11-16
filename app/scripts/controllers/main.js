@@ -9,7 +9,7 @@ angular.module('mydashboard')
 
   	 myService.getResponse("data/dashboard.json").then(function (response) {
      
-            console.log(response.data);
+            $scope.list = response.data.dashboard;
 
         });
 

@@ -11,6 +11,42 @@
   </head>
   <body ng-controller="MainCtrl">
   <h2>Dashboard</h2>
+  <div  >
+
+
+ <div class="panel-group"  id="dashboard-accordion">
+ <div class="panel panel-default">
+ <div class="panel-heading row">
+<div class="col-md-2 col-xs-2">Changelist / Build</div>
+<div class="col-md-2 col-xs-2">Owner</div>
+<div class="col-md-3 col-xs-3">Time Started</div>
+<div class="col-md-1 col-xs-1">State</div>
+<div class="col-md-1 col-xs-1">Metrics</div>
+<div class="col-md-1 col-xs-1">Build</div>
+<div class="col-md-1 col-xs-1">Unit Test</div>
+<div class="col-md-1 col-xs-1">Functional Test</div>
+ </div>
+ </div>
+  <div class="panel panel-default" data-ng-repeat="item in list">
+ <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" data-target="#{{item.id}}" data-parent="#dashboard-accordion">
+ <div class="row">
+<div class="col-md-2 col-xs-2">{{item.id}}</div>
+<div class="col-md-2 col-xs-2">{{item.owner}}</div>
+<div class="col-md-3 col-xs-3">{{item.time_started}}</div>
+<div class="col-md-1 col-xs-1">{{item.state}}</div>
+<div class="col-md-1 col-xs-1"></div>
+<div class="col-md-1 col-xs-1"></div>
+<div class="col-md-1 col-xs-1"></div>
+<div class="col-md-1 col-xs-1"></div>
+</div>
+</div>
+ <div id="{{item.id}}" class="panel-collapse collapse">
+ <div class="panel-body">
+        Anim pariatur cliche...
+   </div>
+  </div>
+  </div>
+  </div>
 <!-- build:js js/main.js -->
      <script src="../bower_components/jquery/dist/jquery.js"></script>
      <script src="../bower_components/angular/angular.js"></script>
