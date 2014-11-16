@@ -10,40 +10,42 @@
 <!-- endbuild -->
   </head>
   <body ng-controller="MainCtrl">
-  <h2>Dashboard</h2>
-  <div  >
+<div class="container-fluid">
 
 
  <div class="panel-group"  id="dashboard-accordion">
  <div class="panel panel-default">
- <div class="panel-heading row">
+ <div class="panel-heading">
+ <div class="row">
 <div class="col-md-2 col-xs-2">Changelist / Build</div>
 <div class="col-md-2 col-xs-2">Owner</div>
-<div class="col-md-3 col-xs-3">Time Started</div>
-<div class="col-md-1 col-xs-1">State</div>
+<div class="col-md-2 col-xs-2">Time Started</div>
+<div class="col-md-2 col-xs-2">State</div>
 <div class="col-md-1 col-xs-1">Metrics</div>
 <div class="col-md-1 col-xs-1">Build</div>
 <div class="col-md-1 col-xs-1">Unit Test</div>
-<div class="col-md-1 col-xs-1">Functional Test</div>
+<div class="col-md-1 col-xs-1 break-word">Functional Test</div>
  </div>
  </div>
-  <div class="panel panel-default" data-ng-repeat="item in list">
- <div class="panel-heading accordion-toggle collapsed" data-toggle="collapse" data-target="#{{item.id}}" data-parent="#dashboard-accordion">
+ </div>
+  <div class="panel {{item.type}} {{item.state_code}}" data-ng-repeat="item in list">
+ <div class="panel-heading accordion-toggle collapsed border-btm-none" data-toggle="collapse" data-target="#{{item.id}}" data-parent="#dashboard-accordion">
  <div class="row">
-<div class="col-md-2 col-xs-2">{{item.id}}</div>
+<div class="col-md-2 col-xs-2"><div class="type-icon col-md-3 col-xs-3"></div>{{item.id}}</div>
 <div class="col-md-2 col-xs-2">{{item.owner}}</div>
-<div class="col-md-3 col-xs-3">{{item.time_started}}</div>
-<div class="col-md-1 col-xs-1">{{item.state}}</div>
-<div class="col-md-1 col-xs-1"></div>
-<div class="col-md-1 col-xs-1"></div>
-<div class="col-md-1 col-xs-1"></div>
-<div class="col-md-1 col-xs-1"></div>
+<div class="col-md-2 col-xs-2">{{item.time_started}}</div>
+<div class="col-md-2 col-xs-2">{{item.state}}</div>
+<div class="col-md-1 col-xs-1 "><div class="col-md-11 col-xs-11 tests"></div></div>
+<div class="col-md-1 col-xs-1 "><div class="col-md-11 col-xs-11 tests"></div></div>
+<div class="col-md-1 col-xs-1 "><div class="col-md-11 col-xs-11 tests"></div></div>
+<div class="col-md-1 col-xs-1 "><div class="col-md-11 col-xs-11 tests"></div></div>
 </div>
 </div>
- <div id="{{item.id}}" class="panel-collapse collapse">
- <div class="panel-body">
-        Anim pariatur cliche...
+
+ <div id="{{item.id}}" class="panel-body panel-collapse collapse">
+       Content
    </div>
+
   </div>
   </div>
   </div>

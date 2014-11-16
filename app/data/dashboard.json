@@ -1,29 +1,32 @@
 {
     "dashboard": [
         {
-            "type": "Build",
+            "type": "build",
             "id": "Tenrox-R1_1235",
             "owner": "",
             "time_started": "",
             "state": "Pending",
+            "state_code":"pending",
             "message": "",
             "data": []
         },
         {
-            "type": "Firewall",
+            "type": "firewall",
             "id": "432462",
             "owner": "jtuck",
             "time_started": "4/18/2014 12:12pm",
             "state": "Running",
+            "state_code":"running",
             "message": "",
             "data": []
         },
         {
-            "type": "Firewall",
+            "type": "firewall",
             "id": "432461",
             "owner": "samy",
             "time_started": "4/18/2014 10:53am",
             "state": "Rejected",
+            "state_code":"rejected",
             "message": "Metrics Reduction",
             "data": [
                 {
@@ -54,11 +57,12 @@
             ]
         },
         {
-            "type": "Build",
+            "type": "build",
             "id": "Tenrox-R1_1234",
             "owner": "",
             "time_started": "4/18/2014 12:12pm",
             "state": "Complete",
+            "state_code":"complete",
             "message": "Complete",
             "data": [
                 {
@@ -89,11 +93,12 @@
             ]
         },
         {
-            "type": "Firewall",
+            "type": "firewall",
             "id": "432460",
             "owner": "samy",
             "time_started": "4/17/2014 7:51am",
             "state": "Rejected",
+            "state_code":"rejected",
             "message": "Metrics Reduction",
             "data": [
                 {
@@ -124,11 +129,12 @@
             ]
         },
         {
-            "type": "Firewall",
+            "type": "firewall",
             "id": "432459",
             "owner": "samy",
             "time_started": "4/16/2014 6:43am",
             "state": "Accepted",
+            "state_code":"accepted",
             "message": "Auto-Merged",
             "data": [
                 {
@@ -159,11 +165,12 @@
             ]
         },
         {
-            "type": "Build",
+            "type": "build",
             "id": "Tenrox-R1_1233",
             "owner": "",
             "time_started": "4/18/2014 12:12pm",
             "state": "Failed",
+            "state_code":"failed",
             "message": "Failed",
             "data": [
                 {
