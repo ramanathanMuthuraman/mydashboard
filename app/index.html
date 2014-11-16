@@ -1,61 +1,84 @@
 <!doctype html>
 <html ng-app="mydashboard">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Dashboard</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-<!-- build:css(.tmp) styles/main.css -->
-     <link type="text/css" rel="stylesheet" href="../.tmp/styles/main.css">
-<!-- endbuild -->
-  </head>
-  <body ng-controller="MainCtrl">
-<div class="container-fluid">
+    <!-- build:css(.tmp) styles/main.css -->
+    <link type="text/css" rel="stylesheet" href="../.tmp/styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body ng-controller="MainCtrl">
+    <div class="container-fluid">
 
 
- <div class="panel-group"  id="dashboard-accordion">
- <div class="panel panel-default">
- <div class="panel-heading">
- <div class="row">
-<div class="col-md-2 col-xs-2">Changelist / Build</div>
-<div class="col-md-2 col-xs-2">Owner</div>
-<div class="col-md-2 col-xs-2">Time Started</div>
-<div class="col-md-2 col-xs-2">State</div>
-<div class="col-md-1 col-xs-1">Metrics</div>
-<div class="col-md-1 col-xs-1">Build</div>
-<div class="col-md-1 col-xs-1">Unit Test</div>
-<div class="col-md-1 col-xs-1 break-word">Functional Test</div>
- </div>
- </div>
- </div>
-  <div class="panel {{item.type}} {{item.state_code}}" data-ng-repeat="item in list">
- <div class="panel-heading accordion-toggle collapsed border-btm-none" data-toggle="collapse" data-target="#{{item.id}}" data-parent="#dashboard-accordion">
- <div class="row">
-<div class="col-md-2 col-xs-2"><div class="type-icon col-md-3 col-xs-3"></div>{{item.id}}</div>
-<div class="col-md-2 col-xs-2">{{item.owner}}</div>
-<div class="col-md-2 col-xs-2">{{item.time_started}}</div>
-<div class="col-md-2 col-xs-2">{{item.state}}</div>
-<div class="col-md-1 col-xs-1 "><div class="col-md-11 col-xs-11 tests"></div></div>
-<div class="col-md-1 col-xs-1 "><div class="col-md-11 col-xs-11 tests"></div></div>
-<div class="col-md-1 col-xs-1 "><div class="col-md-11 col-xs-11 tests"></div></div>
-<div class="col-md-1 col-xs-1 "><div class="col-md-11 col-xs-11 tests"></div></div>
-</div>
-</div>
+        <div class="panel-group" id="dashboard-accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-2">Changelist / Build</div>
+                        <div class="col-md-2 col-xs-2">Owner</div>
+                        <div class="col-md-2 col-xs-2">Time Started</div>
+                        <div class="col-md-2 col-xs-2">State</div>
+                        <div class="col-md-1 col-xs-1">Metrics</div>
+                        <div class="col-md-1 col-xs-1">Build</div>
+                        <div class="col-md-1 col-xs-1">Unit Test</div>
+                        <div class="col-md-1 col-xs-1 break-word">Functional Test</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel {{item.type}} {{item.state_code}}" data-ng-repeat="item in list">
+                <div class="panel-heading accordion-toggle collapsed border-btm-none" data-toggle="collapse" data-target="#{{item.id}}" data-parent="#dashboard-accordion">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-2">
+                            <div class="type-icon col-md-3 col-xs-3"></div>{{item.id}}</div>
+                        <div class="col-md-2 col-xs-2">{{item.owner}}</div>
+                        <div class="col-md-2 col-xs-2">{{item.time_started}}</div>
+                        <div class="col-md-2 col-xs-2">{{item.state}}</div>
+                        <div class="col-md-1 col-xs-1 ">
+                            <div class=" tests"><div class="test-item" ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_metrics]"></div></div>
+                        </div>
+                        <div class="col-md-1 col-xs-1 ">
+                            <div class=" tests"><div class="test-item" ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_build]"></div></div>
+                        </div>
+                        <div class="col-md-1 col-xs-1 ">
+                            <div class=" tests"><div class="test-item" ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_unit_test]"></div></div>
+                        </div>
+                        <div class="col-md-1 col-xs-1 ">
+                            <div class="tests"><div class="test-item" ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_functional_test]"></div></div>
+                        </div>
+                    </div>
+                </div>
 
- <div id="{{item.id}}" class="panel-body panel-collapse collapse">
-       Content
-   </div>
+                <div id="{{item.id}}" class="panel-body panel-collapse collapse">
+                    <div class="row">
+                        <div class="col-xs-10 col-md-10">
+                            <div class="col-xs-3 col-md-3 test-info" ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_metrics]"></div>
+                            <div class="col-xs-3 col-md-3 test-info" ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_build]"></div>
+                            <div class="col-xs-3 col-md-3 test-info"  ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_unit_test]"></div>
+                            <div class="col-xs-3 col-md-3 test-info" ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_functional_test]"></div>
+                        </div>
 
-  </div>
-  </div>
-  </div>
-<!-- build:js js/main.js -->
-     <script src="../bower_components/jquery/dist/jquery.js"></script>
-     <script src="../bower_components/angular/angular.js"></script>
-      <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
-       <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-         <script src="scripts/factory/service.js"></script>
-<!-- endbuild -->
-  </body>
+                        <div class="col-xs-2 col-md-2"></div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- build:js js/main.js -->
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/factory/service.js"></script>
+    <!-- endbuild -->
+</body>
+
 </html>

@@ -10,30 +10,27 @@ $test-failed-cube-color:#d31;
 $test-running-cube-color:#505E67;
 $firewall-cube-color:#acf;
 $build-cube-color:#f0a;
+$test-info-height:100px;
 .tests{
   height:$cube-height;
   background:$test-cube-color;
+}
+.test-item{
+   height:$cube-height;
 }
 .succeed,.complete, .accepted{
   border:1px solid $test-passed-cube-color !important;
    color:$test-passed-cube-color !important;
 } 
-.succeed .tests, .complete .tests, .accepted .tests{
-  background:$test-passed-cube-color;
-}
+
 .rejected,.failed{
    border:1px solid $test-failed-cube-color !important;
     color:$test-failed-cube-color !important;
 }
-.rejected .tests, .failed .tests{
-  background:$test-failed-cube-color;
-}
+
 .running {
    border:1px solid $test-running-cube-color !important;
    color:$test-running-cube-color !important;
-}
-.running .tests{
-  background:$test-running-cube-color;
 }
 .pending{
   opacity:0.3;
@@ -61,4 +58,25 @@ $build-cube-color:#f0a;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
+}
+.test-info{
+  height:$test-info-height;
+}
+.positive{
+   background:$test-passed-cube-color;
+
+}
+.negative{
+   background:$test-failed-cube-color;
+
+}
+.computing{
+  background:$test-running-cube-color;
+  width:75%;
+}
+.passed{
+  border:1px solid $test-passed-cube-color !important;
+}
+.failed{
+  border:1px solid $test-failed-cube-color !important;
 }

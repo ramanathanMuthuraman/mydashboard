@@ -6,7 +6,7 @@
             "owner": "",
             "time_started": "",
             "state": "Pending",
-            "state_code":"pending",
+            "state_code": "pending",
             "message": "",
             "data": []
         },
@@ -16,8 +16,9 @@
             "owner": "jtuck",
             "time_started": "4/18/2014 12:12pm",
             "state": "Running",
-            "state_code":"running",
+            "state_code": "running",
             "message": "",
+            "change_in_metrics": "computing",
             "data": []
         },
         {
@@ -26,29 +27,35 @@
             "owner": "samy",
             "time_started": "4/18/2014 10:53am",
             "state": "Rejected",
-            "state_code":"rejected",
+            "state_code": "rejected",
+            "change_in_metrics": "negative",
+            "change_in_build": "positive",
+            "change_in_unit_test": "positive",
+            "change_in_functional_test": "positive",
             "message": "Metrics Reduction",
             "data": [
                 {
                     "metrics": {
-                        "Test": "64",
-                        "Maintainability": "-53",
-                        "Security": "64",
-                        "Workmanship": "72"
+                        "test": "64",
+                        "maintainability": "-53",
+                        "security": "64",
+                        "workmanship": "72"
                     }
                 },
                 {
-                    "build": "10:46am - 4/17/2014"
+                    "build": {
+                        "time": "10:46am - 4/17/2014"
+                    }
                 },
                 {
-                    "unit_Test": {
+                    "unit_test": {
                         "code_coverage": "76%",
                         "tests_passed": "142",
                         "tests_failed": "10"
                     }
                 },
                 {
-                    "functional_Test": {
+                    "functional_test": {
                         "code_coverage": "23%",
                         "tests_passed": "4321",
                         "tests_failed": "2145"
@@ -62,29 +69,35 @@
             "owner": "",
             "time_started": "4/18/2014 12:12pm",
             "state": "Complete",
-            "state_code":"complete",
+            "state_code": "complete",
             "message": "Complete",
+            "change_in_metrics": "positive",
+            "change_in_build": "positive",
+            "change_in_unit_test": "positive",
+            "change_in_functional_test": "positive",
             "data": [
                 {
                     "metrics": {
-                        "Test": "64",
-                        "Maintainability": "-53",
-                        "Security": "64",
-                        "Workmanship": "72"
+                        "test": "64",
+                        "maintainability": "-53",
+                        "security": "64",
+                        "workmanship": "72"
                     }
                 },
                 {
-                    "build": "10:46am - 4/17/2014"
+                    "build": {
+                        "time": "10:46am - 4/17/2014"
+                    }
                 },
                 {
-                    "unit_Test": {
+                    "unit_test": {
                         "code_coverage": "76%",
                         "tests_passed": "142",
                         "tests_failed": "10"
                     }
                 },
                 {
-                    "functional_Test": {
+                    "functional_test": {
                         "code_coverage": "23%",
                         "tests_passed": "4321",
                         "tests_failed": "2145"
@@ -98,32 +111,16 @@
             "owner": "samy",
             "time_started": "4/17/2014 7:51am",
             "state": "Rejected",
-            "state_code":"rejected",
+            "state_code": "rejected",
             "message": "Metrics Reduction",
+            "change_in_metrics": "negative",
             "data": [
                 {
                     "metrics": {
-                        "Test": "64",
-                        "Maintainability": "-53",
+                        "test": "64",
+                        "maintainability": "-53",
                         "Security": "64",
                         "Workmanship": "72"
-                    }
-                },
-                {
-                    "build": "10:46am - 4/17/2014"
-                },
-                {
-                    "unit_Test": {
-                        "code_coverage": "76%",
-                        "tests_passed": "142",
-                        "tests_failed": "10"
-                    }
-                },
-                {
-                    "functional_Test": {
-                        "code_coverage": "23%",
-                        "tests_passed": "4321",
-                        "tests_failed": "2145"
                     }
                 }
             ]
@@ -134,29 +131,35 @@
             "owner": "samy",
             "time_started": "4/16/2014 6:43am",
             "state": "Accepted",
-            "state_code":"accepted",
+            "state_code": "accepted",
             "message": "Auto-Merged",
+            "change_in_metrics": "positive",
+            "change_in_build": "positive",
+            "change_in_unit_test": "positive",
+            "change_in_functional_test": "positive",
             "data": [
                 {
                     "metrics": {
-                        "Test": "64",
-                        "Maintainability": "-53",
-                        "Security": "64",
-                        "Workmanship": "72"
+                        "test": "64",
+                        "maintainability": "-53",
+                        "security": "64",
+                        "workmanship": "72"
                     }
                 },
                 {
-                    "build": "10:46am - 4/17/2014"
+                    "build": {
+                        "time": "10:46am - 4/17/2014"
+                    }
                 },
                 {
-                    "unit_Test": {
+                    "unit_test": {
                         "code_coverage": "76%",
                         "tests_passed": "142",
                         "tests_failed": "10"
                     }
                 },
                 {
-                    "functional_Test": {
+                    "functional_test": {
                         "code_coverage": "23%",
                         "tests_passed": "4321",
                         "tests_failed": "2145"
@@ -170,35 +173,9 @@
             "owner": "",
             "time_started": "4/18/2014 12:12pm",
             "state": "Failed",
-            "state_code":"failed",
+            "state_code": "failed",
             "message": "Failed",
-            "data": [
-                {
-                    "metrics": {
-                        "Test": "64",
-                        "Maintainability": "-53",
-                        "Security": "64",
-                        "Workmanship": "72"
-                    }
-                },
-                {
-                    "build": "10:46am - 4/17/2014"
-                },
-                {
-                    "unit_Test": {
-                        "code_coverage": "76%",
-                        "tests_passed": "142",
-                        "tests_failed": "10"
-                    }
-                },
-                {
-                    "functional_Test": {
-                        "code_coverage": "23%",
-                        "tests_passed": "4321",
-                        "tests_failed": "2145"
-                    }
-                }
-            ]
+            "data": []
         }
     ]
 }
