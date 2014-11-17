@@ -11,6 +11,10 @@ $test-running-cube-color:#505E67;
 $firewall-cube-color:#acf;
 $build-cube-color:#f0a;
 $test-info-height:200px;
+$container-width : 960px;
+.container{
+  width:$container-width;
+}
 .tests{
   height:$cube-height;
   background:$test-cube-color;
