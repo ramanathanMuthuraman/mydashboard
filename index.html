@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="panel {{item.type}} {{item.state_code}}" data-ng-repeat="item in list">
-                <div class="panel-heading accordion-toggle collapsed border-btm-none" data-toggle="collapse" data-target="#{{item.id}}" data-parent="#dashboard-accordion">
+                <div class="panel-heading accordion-toggle collapsed border-btm-none" data-toggle="collapse" ng-attr-data-target="{{ item.state_code != 'pending' ? '#'+item.id : '' }}" data-parent="#dashboard-accordion">
                     <div class="row">
                         <div class="col-md-2 col-xs-2">
                             <div class="type-icon col-md-3 col-xs-3"></div>{{item.id}}</div>
