@@ -55,14 +55,15 @@
 
                 <div id="{{item.id}}" class="panel-body panel-collapse collapse">
                     <div class="row">
-                        <div class="col-xs-10 col-md-10">
-                            <div class="col-xs-3 col-md-3 test-info" ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_metrics]"></div>
-                            <div class="col-xs-3 col-md-3 test-info" ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_build]"></div>
-                            <div class="col-xs-3 col-md-3 test-info"  ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_unit_test]"></div>
-                            <div class="col-xs-3 col-md-3 test-info" ng-class="{positive:'positive',negative:'negative',computing:'computing'}[item.change_in_functional_test]"></div>
+                        <div class="col-xs-12 col-md-12 test-info-container">
+                            <div class="pull-left test-info" ng-class="{positive:'positive',negative:'negative'}[item.change_in_metrics]"></div>
+                            <div class="pull-left test-info" ng-class="{positive:'positive',negative:'negative'}[item.change_in_build]"></div>
+                            <div class="pull-left test-info" ng-class="{positive:'positive',negative:'negative'}[item.change_in_unit_test]"></div>
+                            <div class="pull-left test-info" ng-class="{positive:'positive',negative:'negative'}[item.change_in_functional_test]"></div>
+                             <div class="pull-left test-info-msg"></div>
                         </div>
 
-                        <div class="col-xs-2 col-md-2"></div>
+                      
 
 
                     </div>

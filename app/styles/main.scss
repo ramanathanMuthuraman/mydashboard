@@ -10,7 +10,7 @@ $test-failed-cube-color:#d31;
 $test-running-cube-color:#505E67;
 $firewall-cube-color:#acf;
 $build-cube-color:#f0a;
-$test-info-height:100px;
+$test-info-height:200px;
 .tests{
   height:$cube-height;
   background:$test-cube-color;
@@ -60,23 +60,26 @@ $test-info-height:100px;
   hyphens: auto;
 }
 .test-info{
+  width:20%;
   height:$test-info-height;
-}
+  background:none !important;
+  margin-right:20px;
+ }
 .positive{
+    border:1px solid $test-passed-cube-color !important;
    background:$test-passed-cube-color;
 
 }
 .negative{
+ border:1px solid $test-failed-cube-color !important;
    background:$test-failed-cube-color;
 
 }
+
 .computing{
   background:$test-running-cube-color;
   width:75%;
+ 
 }
-.passed{
-  border:1px solid $test-passed-cube-color !important;
-}
-.failed{
-  border:1px solid $test-failed-cube-color !important;
-}
+
+
