@@ -5,4 +5,4 @@
  *
  * Main module of the application.
  */
-angular.module('mydashboard',[]);
+angular.module('mydashboard',['tc.chartjs']);
