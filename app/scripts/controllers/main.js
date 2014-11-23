@@ -13,22 +13,22 @@ angular.module('mydashboard')
 
         });
 
-  	 $scope.data = [
-      {
-        value: 300,
-        color:'#F7464A',
-        highlight: '#FF5A5E'
-      },
-      {
-        value: 50,
-        color: '#46BFBD',
-        highlight: '#5AD3D1'
-      },
-      {
-        value: 100,
-        color: '#FDB45C',
-        highlight: '#FFC870'
+  $scope.data = [[
+      ['Heavy Industry', 12],['Retail', 9], ['Light Industry', 14], 
+      ['Out of home', 16],['Commuting', 7], ['Orientation', 9]
+    ]];
+
+    $scope.chartOptions = { 
+      seriesDefaults: {
+        // Make this a pie chart.
+        renderer: jQuery.jqplot.PieRenderer, 
+        rendererOptions: {
+          // Put data labels on the pie slices.
+          // By default, labels show the percentage of the slice.
+          showDataLabels: true
+        }
       }
-    ];
+    };
+
 
   }]);

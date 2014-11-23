@@ -58,8 +58,9 @@
                         <div class="col-xs-12 col-md-12 test-info-container">
                             <div class="pull-left test-info" ng-class="{positive:'positive',negative:'negative'}[item.change_in_metrics]">
                                 
-                                 <canvas tc-chartjs-pie  chart-data="data" auto-legend></canvas>
+                                <div ui-chart="data" style="width:150px;height:150px;" chart-options="chartOptions"></div>
 
+                    
                             </div>
                             <div class="pull-left test-info" ng-class="{positive:'positive',negative:'negative'}[item.change_in_build]"></div>
                             <div class="pull-left test-info" ng-class="{positive:'positive',negative:'negative'}[item.change_in_unit_test]"></div>
@@ -78,9 +79,10 @@
     </div>
     <!-- build:js js/main.js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/Chart.js/Chart.js"></script>
+    <script src="../bower_components/jqplot/jquery.jqplot.js"></script>
+      <script src="../bower_components/jqplot/plugins/jqplot.pieRenderer.js"></script>
     <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/tc-angular-chartjs/dist/tc-angular-chartjs.js"></script>
+    <script src="../bower_components/angular-ui-chart/src/chart.js"></script>
     <script src="../bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
